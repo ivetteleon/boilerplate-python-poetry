@@ -1,19 +1,20 @@
 from typing import Callable
 
-from boilerplate_python.application.interface_adapters.example_interface import IExampleGetDataUseCase
+from boilerplate_python.domain.interfaces.user_service_interface import IUserService
+
+user_service_global: IUserService = None
 
 
-example_get_data_use_ase: IExampleGetDataUseCase = None
+def set_use_cases(
+        user_service: IUserService
+        ):
 
-
-def set_use_cases(example_use_case_imp: IExampleGetDataUseCase):
-
-    global example_get_data_use_ase
-    example_get_data_use_ase = example_use_case_imp
+    global user_service_global
+    user_service_global = user_service
 
 
 def get_use_cases(_type: str) -> Callable:
 
     return {
-        "example_get_data_use_ase": lambda: example_get_data_use_ase
+        "user_service": lambda: user_service_global
     }.get(_type)

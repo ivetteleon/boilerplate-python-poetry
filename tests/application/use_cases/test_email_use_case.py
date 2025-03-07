@@ -1,6 +1,7 @@
+"""
 from boilerplate_python.domain.schemas import SchemaTest
 
-from boilerplate_python.application.use_cases.example_use_case import ExampleGetDataUseCase
+from boilerplate_python.application.example.use_cases.example_use_case import ExampleGetDataUseCase
 
 from boilerplate_python.application.interface_adapters.example_interface import ExampleServiceResponse
 
@@ -21,3 +22,4 @@ def test_get_data():
 
     assert isinstance(data, SchemaTest)
     
+"""

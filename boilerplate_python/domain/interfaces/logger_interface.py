@@ -15,6 +15,11 @@ class ILogger(metaclass=ABCMeta):
     def info(message: str) -> None:
         ...
 
+
+    #@abstractmethod 
+    #def debug(message: str) -> None:
+    #    ...
+
     @abstractmethod
     def warning(message: str) -> None:
         ...

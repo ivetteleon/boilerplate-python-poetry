@@ -1,15 +1,13 @@
 from __future__ import annotations
 
 from loguru import logger
-
-from abc import ABCMeta
-
-from boilerplate_python.application.interface_adapters.logger_interface import ILogger
-
-import datetime
-import json
 import loguru
 
+from abc import ABCMeta
+import datetime
+import json
+
+from boilerplate_python.domain.interfaces.logger_interface import ILogger
 
 class SingletonLoggerMeta(ABCMeta):
 

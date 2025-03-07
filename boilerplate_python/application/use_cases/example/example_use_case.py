@@ -1,11 +1,10 @@
 
+"""
 from boilerplate_python.application.settings import get_settings
 
-from boilerplate_python.application.use_cases import BaseUseCase
-
-from boilerplate_python.application.interface_adapters.example_interface import ExampleServiceResponse
-from boilerplate_python.application.interface_adapters.example_interface import IExampleService
-from boilerplate_python.application.interface_adapters.example_interface import IExampleGetDataUseCase
+from boilerplate_python.domain.interfaces.example_interface import ExampleServiceResponse
+from boilerplate_python.domain.interfaces.example_interface import IExampleService
+from boilerplate_python.domain.interfaces.example_interface import IExampleGetDataUseCase
 
 from boilerplate_python.domain.schemas import SchemaTest
 from boilerplate_python.domain.exceptions import OperationException
@@ -41,3 +40,4 @@ class ExampleGetDataUseCase(IExampleGetDataUseCase):
                 code=500, message=f"{response.message}", function="get_data", obj="ExampleGetDataUseCase"
             )
         
+"""

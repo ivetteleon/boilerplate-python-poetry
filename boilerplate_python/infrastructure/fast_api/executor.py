@@ -11,20 +11,19 @@ from boilerplate_python.domain.exceptions import OperationException
 from boilerplate_python.domain.exceptions import RepositoryException
 from boilerplate_python.domain.exceptions import ServiceException
 
-from boilerplate_python.application.interface_adapters.example_interface import IExampleGetDataUseCase
-
 from boilerplate_python.infrastructure.fast_api.routers.example_router import router as example_router
 from boilerplate_python.infrastructure.fast_api.dependencies import set_use_cases
 
+from boilerplate_python.domain.interfaces.user_service_interface import IUserService
 
 class FastApi():
     __slots__ = ("logger", "example_get_data_use_ase", "app")
 
-    def __init__(self, example_get_data_use_ase: IExampleGetDataUseCase):
+    def __init__(self, user_service: IUserService):
 
         self.logger = get_settings().general.logger()
 
-        set_use_cases(example_get_data_use_ase)
+        set_use_cases(user_service)
 
         self.app = FastAPI()
         self.app.include_router(example_router, prefix="/v1", tags=["example_router"])

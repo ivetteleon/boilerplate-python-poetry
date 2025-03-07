@@ -1,4 +1,5 @@
 
+"""
 from boilerplate_python.application.settings import get_settings
 
 from boilerplate_python.domain.schemas import SchemaTest
@@ -31,3 +32,5 @@ class Cli():
         except OperationException as opex:
             
             self.logger.get_context().error(f"Error: -> {opex.message}")
+
+            """

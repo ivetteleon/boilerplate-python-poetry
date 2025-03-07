@@ -1,4 +1,5 @@
 
+"""
 from boilerplate_python.application.interface_adapters.example_interface import ExampleServiceResponse
 from boilerplate_python.application.interface_adapters.example_interface import IExampleService
 
@@ -34,4 +35,4 @@ class ExampleService(IExampleService):
             code=200,
             data = obj
         )
-    
+"""
